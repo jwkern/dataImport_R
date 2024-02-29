@@ -13,26 +13,25 @@ In this example, the data are NASA telescope data of an accretion disk, and has 
 
 ___________________________________________________________________________________________________________________________________________________________________
 CODE DESCRIPTION:
-This R code (dataImport_JWK.R) imports the spectrum of GV Tau North (gvtau_spec.csv) and its synthetic spectrum (gvtau_model.csv) in order to plot the arrays and calculate the reduced chi-squared as a goodness of fit. 
+This R code (dataImport_JWK.r) imports the spectrum of GV Tau North (gvtau_spec.csv) and its synthetic spectrum (gvtau_model.csv) in order to plot the arrays and calculate the reduced chi-squared as a goodness of fit. 
 
 ___________________________________________________________________________________________________________________________________________________________________
 RUNNING THE CODE:
-1) Download the diabetes data (diabetic_data.csv) and the SQL script (dataImport_JWK.sql)
+1) Download the spectral data (gvtau_spec.csv and gvtau_model.csv) and the R script (dataImport_JWK.r)
 
 2) In a terminal, cd into the directory that now contains the data and the script
 
-3) In dataImport_JWK.sql, change the file path on line 69 from "/home/jwkern/Downloads/" to point to your local directory containing diabetic_data.csv
+3) In dataImport_JWK.r, change the file path on line 13 and 16 from "/home/jwkern/..." to point to your local directory containing the .csv files
 
-4) Run the script by typing the following into the command line:
+4) Run the script in R Studio by either:
+4.1) Opening the file dataImport_JWK.r and clicking the "Source" button in the top right corner of the window
+4.2) Highlighting all of the code and clicking "Run"
+   or
+4.3) using the console window and command line to type:
 
-            mysql --local-infile=1 -u username -p password < dataImport_JWK.sql
-
-(P.S. don't forget to change the username and password to your mySQL credentials)
-
-4.1) If you wish to save the output in a .txt file, instead run the script as:
-      
-            mysql --local-infile=1 -u username -p password < dataImport_JWK.sql > output.txt
-
+            source("~/R/General/dataImport_JWK.r")
+   
+   P.S. change the source string to the directory path containing the R script on your local machine
 
 ___________________________________________________________________________________________________________________________________________________________________
 ___________________________________________________________________________________________________________________________________________________________________
