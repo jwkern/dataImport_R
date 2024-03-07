@@ -5,7 +5,7 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________________________________________________________
 GENERAL DESCRIPTION:
-This R script imports data and model arrays from .csv files, and plots them using ggplot2. 
+ This R script imports data and model arrays from .csv files, plots them using ggplot2, and then calculates the reduced chi-squared value. 
 
 ___________________________________________________________________________________________________________________________________________________________________
 DATA DESCRIPTION:
