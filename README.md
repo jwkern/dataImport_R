@@ -9,13 +9,16 @@ This R script imports data and model arrays from .csv files, and plots them usin
 
 ___________________________________________________________________________________________________________________________________________________________________
 DATA DESCRIPTION:
-In this example, the data are NASA telescope data of an accretion disk, and has already been cleaned, reduced, analyzed, and modeled using custom IDL software. The two data frames are thus the empirical data (dataFrame) and the model data (modelFrame).  
+In this example, the data are NASA telescope data of an accretion disk, and has already been cleaned, reduced, analyzed, and modeled using custom IDL software. 
+The two data frames are thus the empirical data (dataFrame) and the model data (modelFrame).  
 
 ___________________________________________________________________________________________________________________________________________________________________
 CODE DESCRIPTION:
-This R code (dataImport_JWK.r) imports the spectrum of GV Tau North (gvtau_spec.csv) and its synthetic spectrum (gvtau_model.csv) in order to plot the arrays and calculate the reduced chi-squared as a goodness of fit. 
+This R code (dataImport_JWK.r) imports the spectrum of GV Tau North (gvtau_spec.csv) and its synthetic spectrum (gvtau_model.csv) in order to plot the arrays and 
+calculate the reduced chi-squared as a goodness of fit. 
 
-!WARNING!: The model is originally too large (60,000) for the data (30720), which isn't an issue in IDL as long as the x/y for each are the same. However, R won't plot it in the same way, so the model is reduced (un-interpolated?) to the length of the empirical data. This is a HUGE time sink in the code as I implement it as a for loop, but its not necessary for most data sets, so the cod can be modified to remove that with other data sets, and it would work much faster than it does on this telescope data. 
+!WARNING!: Reducing the model size to match the length of the empirical data is a HUGE time sink in the code. It is not necessary for most data sets, so the code 
+can be modified to skip or remove it. 
 
 ___________________________________________________________________________________________________________________________________________________________________
 RUNNING THE CODE:
