@@ -1,4 +1,5 @@
-# This program plots an x and y array from an input .csv file
+#This R script imports data and model arrays from .csv files, plots them using ggplot2, and 
+#then calculates the reduced chi-squared value. 
 #
 #Written by Joshua W. Kern
 #Date: 12/28/23
